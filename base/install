@@ -14,14 +14,14 @@ apt-get update
 apt-get install python-virtualenv curl git openssh-server python-pip libzmq-dev g++ python-dev wget libyaml-dev -y
 virtualenv ${VENV_DIR}
 mkdir ${VENV_DIR}/.pip
-cat > ${VENV_DIR}/.pip/pip.conf << "EOF"
+cat > ${HOME}/.pip/pip.conf << "EOF"
 [global]
 index-url = http://pypi.iguokr.com/guokr/dev/+simple
 [install]
 use-mirrors = true
 mirrors = http://pypi.iguokr.com/
 EOF
-cat > ${VENV_DIR}/.pydistutils << "EOF"
+cat > ${HOME}/.pydistutils.cfg << "EOF"
 [easy_install]
 index_url = http://pypi.iguokr.com/guokr/dev/+simple
 EOF
