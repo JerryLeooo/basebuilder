@@ -13,7 +13,7 @@ echo "ubuntu ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 apt-get update
 apt-get install python-virtualenv curl git openssh-server python-pip libzmq-dev g++ python-dev wget libyaml-dev -y
 virtualenv ${VENV_DIR}
-mkdir ${VENV_DIR}/.pip
+mkdir ${HOME}/.pip
 cat > ${HOME}/.pip/pip.conf << "EOF"
 [global]
 index-url = http://pypi.iguokr.com/guokr/dev/+simple
@@ -35,4 +35,3 @@ echo "export DEBIAN_FRONTEND=noninteractive" >> /etc/profile
 
 mkdir -p /etc/circus
 cp ${SOURCE_DIR}/utils/circus.ini /etc/circus/circus.ini
-
