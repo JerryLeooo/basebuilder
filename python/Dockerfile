@@ -12,4 +12,12 @@ run	tar -xvf basebuilder.tar.gz -C /var/lib/tsuru --strip 1
 run	cp /var/lib/tsuru/python/deploy /var/lib/tsuru
 run	cp /var/lib/tsuru/base/start /var/lib/tsuru
 run /var/lib/tsuru/base/replace
+run mkdir $HOME/.pip
+run echo '[global]' >> $HOME/.pip/pip.conf
+run echo 'index-url = http://pypi.iguokr.com/guokr/dev/+simple' >> $HOME/.pip/pip.conf
+run echo '[install]' >> $HOME/.pip/pip.conf
+run echo 'use-mirrors = true' >> $HOME/.pip/pip.conf
+run echo 'mirrors = http://pypi.iguokr.com/' >> $HOME/.pip/pip.conf
+run echo '[easy_install]' >> $HOME/.pydistutils.cfg
+run echo 'index_url = http://pypi.iguokr.com/guokr/dev/+simple' >> $HOME/.pydistutils.cfg
 run	/var/lib/tsuru/base/install
