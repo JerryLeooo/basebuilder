@@ -10,13 +10,6 @@ echo "ubuntu ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # do not remove, circus is needed to manage application processes
 # and its environment variables
-cat > /etc/apt/sources.list << "EOF"
-deb http://mirrors.sohu.com/debian wheezy main non-free contrib
-deb-src http://mirrors.sohu.com/debian wheezy main non-free contrib
-
-deb http://security.debian.org/ wheezy/updates main contrib non-free
-deb-src http://security.debian.org/ wheezy/updates main contrib non-free
-EOF
 apt-get update
 apt-get install python-virtualenv curl git openssh-server python-pip libzmq-dev g++ python-dev wget libyaml-dev -y
 virtualenv ${VENV_DIR}
