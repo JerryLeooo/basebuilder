@@ -13,6 +13,7 @@ echo "ubuntu ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 apt-get update
 apt-get install python-virtualenv curl git openssh-server python-pip libzmq-dev g++ python-dev wget libyaml-dev -y
 virtualenv ${VENV_DIR}
+mkdir ${VENV_DIR}/.pip
 cat > ${VENV_DIR}/.pip/pip.conf << "EOF"
 [global]
 index-url = http://pypi.iguokr.com/guokr/dev/+simple
