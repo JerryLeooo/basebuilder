@@ -12,6 +12,7 @@ run	tar -xvf basebuilder.tar.gz -C /var/lib/tsuru --strip 1
 run	cp /var/lib/tsuru/python/deploy /var/lib/tsuru
 run	cp /var/lib/tsuru/base/start /var/lib/tsuru
 run /var/lib/tsuru/base/replace
+run apt-get update
 run mkdir $HOME/.pip
 run echo '[global]' >> $HOME/.pip/pip.conf
 run echo 'index-url = http://pypi.iguokr.com/guokr/dev/+simple' >> $HOME/.pip/pip.conf
