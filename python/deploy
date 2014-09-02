@@ -6,6 +6,9 @@ source ${SOURCE_DIR}/base/deploy
 source ${SOURCE_DIR}/config
 
 if [ -f ${CURRENT_DIR}/requirements.txt ]; then
+    cat $HOME/.pip/pip.conf
+    cat $HOME/.pydistutils.cfg
+    echo '-------------------------------------------'
 	sudo pip install -r ${CURRENT_DIR}/requirements.txt
 elif [ -f ${CURRENT_DIR}/setup.py ]; then
 	sudo pip install ${CURRENT_DIR}/
