@@ -5,7 +5,9 @@ source ${SOURCE_DIR}/base/deploy
 
 source ${SOURCE_DIR}/config
 
-mkdir $HOME/.pip
+if [! -d $HOME/.pip]; then
+    mkdir $HOME/.pip
+fi
 
 cat > $HOME/.pip/pip.conf << "EOF"
 [global]
