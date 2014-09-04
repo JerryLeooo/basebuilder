@@ -13,10 +13,10 @@ function so_dependencies() {
             sudo -E apt-get install $(cat ${CURRENT_DIR}/requirements.apt) -y --force-yes
         else
             echo '1'
-            cat $(CURRENT_DIR)/requirements.apt
+            cat $CURRENT_DIR/requirements.apt
         fi
     else
         echo '2'
-        cat $(CURRENT_DIR)/requirements.apt
+        cat $CURRENT_DIR/requirements.apt
     fi 
 }
