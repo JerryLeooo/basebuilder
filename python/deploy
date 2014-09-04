@@ -5,7 +5,7 @@ source ${SOURCE_DIR}/base/deploy
 
 source ${SOURCE_DIR}/config
 
-if [! -d $HOME/.pip]; then
+if [ ! -d $HOME/.pip]; then
     mkdir $HOME/.pip
 fi
 
