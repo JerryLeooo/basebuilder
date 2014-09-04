@@ -2,6 +2,7 @@
 
 function so_dependencies() {
     export DEBIAN_FRONTEND=noninteractive
+    echo '------------------'
     if [ -f ${CURRENT_DIR}/requirements.apt ]; then
         set +e
         sudo -E apt-get install $(cat ${CURRENT_DIR}/requirements.apt) -y --force-yes
