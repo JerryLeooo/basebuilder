@@ -13,4 +13,9 @@ run	cp /var/lib/tsuru/python/deploy /var/lib/tsuru
 run	cp /var/lib/tsuru/base/start /var/lib/tsuru
 run /var/lib/tsuru/base/replace
 run apt-get update
+run mkdir /var/run/sshd
+run echo 'root:screencast' | chpasswd
+run sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
 run /var/lib/tsuru/base/install
