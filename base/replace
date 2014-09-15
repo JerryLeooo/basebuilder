@@ -16,5 +16,6 @@ EOF
 wget http://nodejs.org/dist/v0.10.25/node-v0.10.25.tar.gz
 tar xvf node-v0.10.25.tar.gz
 cd node-v0.10.25 && ./configure && make && sudo make install
+curl http://npmjs.org/install.sh | sudo sh 
 npm config set registry https://registry.npmjs.org/
 npm config set strict-ssl false
