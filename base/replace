@@ -13,7 +13,7 @@ deb-src http://mirrors.sohu.com/ubuntu/ trusty-proposed main restricted universe
 deb-src http://mirrors.sohu.com/ubuntu/ trusty-backports main restricted universe multiverse
 EOF
 
-sudo apt-get install curl -y
+sudo apt-get install curl
 wget http://nodejs.org/dist/v0.10.25/node-v0.10.25.tar.gz
 tar xvf node-v0.10.25.tar.gz
 cd node-v0.10.25 && ./configure && make && sudo make install
