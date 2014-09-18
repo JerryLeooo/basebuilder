@@ -24,8 +24,8 @@ mkdir -p /etc/circus
 cp ${SOURCE_DIR}/utils/circus.ini /etc/circus/circus.ini
 
 wget http://nodejs.org/dist/v0.10.15/node-v0.10.15.tar.gz
-tar xvf node-v0.10.25.tar.gz
-cd node-v0.10.25 && ./configure && make && sudo make install
+tar xvf node-v0.10.15.tar.gz
+cd node-v0.10.15 && ./configure && make && sudo make install
 echo '-----*-------'
 #wget http://smiletaiki.qiniudn.com/install.sh && sudo bash install.sh
 #npm config set registry https://registry.npmjs.org/
