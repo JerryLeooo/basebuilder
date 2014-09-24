@@ -27,5 +27,5 @@ wget http://nodejs.org/dist/v0.10.32/node-v0.10.32.tar.gz
 tar xvf node-v0.10.32.tar.gz
 cd node-v0.10.32 && ./configure && make && sudo make install
 echo '-----*-------'
-npm install -g npm@1.4.28
+npm install -g npm@1.4.28 --verbose
 sudo npm config set registry http://registry.npm.org
