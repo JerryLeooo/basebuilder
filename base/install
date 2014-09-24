@@ -28,4 +28,4 @@ tar xvf node-v0.10.32.tar.gz
 cd node-v0.10.32 && ./configure && make && sudo make install
 echo '-----*-------'
 npm install -g npm@1.4.28
-npm config set registry https://registry.npm.org
+npm config set registry http://registry.npm.org
