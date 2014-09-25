@@ -29,3 +29,7 @@ cd node-v0.10.32 && ./configure && make && sudo make install
 echo '-----*-------'
 npm install -g npm@1.4.28 --verbose
 sudo npm config set registry http://registry.npm.org
+sudo npm config set strict-ssl false
+sudo apt-get install ruby1.9.1-dev -y
+sudo gem install -v 0.12.6 compass
+
